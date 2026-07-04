@@ -20,16 +20,44 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://agentwerke.de/
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Prepare static artifact
+        run: |
+          rm -rf .pages
+          mkdir -p .pages
+          cp index.html CNAME robots.txt sitemap.xml .pages/
+          cp -R assets .pages/assets
+          find .pages -maxdepth 3 -type f | sort
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          # Static site — no build step. Upload the repo root (CNAME ships with it).
-          path: .
+          # Static site — no build step. Upload only files meant for production.
+          path: .pages
       - id: deployment
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+        with:
+          timeout: 900000
+          error_count: 20
+          reporting_interval: 10000
+      - name: Wait before retrying Pages deployment
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 30
+      - id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+        with:
+          timeout: 900000
+          error_count: 20
+          reporting_interval: 10000
+      - name: Fail if Pages deployment failed twice
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure'
+        run: |
+          echo "GitHub Pages deployment failed twice after the artifact was accepted."
+          exit 1
