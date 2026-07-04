@@ -7,8 +7,8 @@
   </g>
 
   <g transform="translate(90,84)">
-    <rect width="40" height="40" rx="5" fill="#00dce5" fill-opacity="0.14" stroke="#00dce5" stroke-opacity="0.55"/>
-    <text x="20" y="27" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="18" font-weight="700" fill="#00dce5">[]</text>
+    <rect width="40" height="40" rx="5" fill="#33c5cf" fill-opacity="0.14" stroke="#33c5cf" stroke-opacity="0.55"/>
+    <text x="20" y="27" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="18" font-weight="700" fill="#33c5cf">[]</text>
     <text x="56" y="28" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#e5e2e3">Agentwerke<tspan fill="#849495"> by Isartor AI</tspan></text>
   </g>
 
@@ -19,15 +19,15 @@
 
   <g transform="translate(90,510)" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="19" font-weight="500">
     <g><rect width="150" height="46" rx="4" fill="#1c1b1c" stroke="#3a494a"/><text x="75" y="29" text-anchor="middle" fill="#b6c0c1">Trigger</text></g>
-    <g transform="translate(170,0)"><rect width="170" height="46" rx="4" fill="#1c1b1c" stroke="#00dce5" stroke-opacity="0.6"/><text x="85" y="29" text-anchor="middle" fill="#00dce5">Policy gate</text></g>
+    <g transform="translate(170,0)"><rect width="170" height="46" rx="4" fill="#1c1b1c" stroke="#33c5cf" stroke-opacity="0.6"/><text x="85" y="29" text-anchor="middle" fill="#33c5cf">Policy gate</text></g>
     <g transform="translate(360,0)"><rect width="150" height="46" rx="4" fill="#1c1b1c" stroke="#3a494a"/><text x="75" y="29" text-anchor="middle" fill="#b6c0c1">Approval</text></g>
-    <g transform="translate(530,0)"><rect width="170" height="46" rx="4" fill="#1c1b1c" stroke="#c3f400" stroke-opacity="0.6"/><text x="85" y="29" text-anchor="middle" fill="#c3f400">Evidence</text></g>
+    <g transform="translate(530,0)"><rect width="170" height="46" rx="4" fill="#1c1b1c" stroke="#81c995" stroke-opacity="0.6"/><text x="85" y="29" text-anchor="middle" fill="#81c995">Evidence</text></g>
   </g>
 
   <defs>
     <radialGradient id="glow" cx="82%" cy="0%" r="70%">
-      <stop offset="0%" stop-color="#00dce5" stop-opacity="0.18"/>
-      <stop offset="60%" stop-color="#00dce5" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#33c5cf" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#33c5cf" stop-opacity="0"/>
     </radialGradient>
   </defs>
 </svg>

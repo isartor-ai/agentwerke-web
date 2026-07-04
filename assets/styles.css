@@ -19,13 +19,13 @@
   --text: #e5e2e3;
   --text-2: #b6c0c1;
   --muted: #849495;
-  --accent: #00dce5;                   /* brand cyan */
-  --accent-2: #63f7ff;                 /* brand hover */
+  --accent: #33c5cf;                   /* brand cyan */
+  --accent-2: #5fd4dd;                 /* brand hover */
   --accent-ink: #0e0e0f;               /* text on cyan */
-  --ok: #c3f400;                       /* lime accent */
+  --ok: #81c995;                       /* lime accent */
   --ok-ink: #0e0e0f;
-  --blue: #00a6b3;                     /* darker cyan, for ambient glow / neutral-secondary */
-  --ring: rgb(0 220 229 / 0.55);
+  --blue: #00a6b3;                     /* darker cyan, neutral-secondary */
+  --ring: rgb(51 197 207 / 0.55);
   --shadow: 0 18px 50px -24px rgb(0 0 0 / 0.7);
   --radius: 6px;
   --radius-sm: 4px;
@@ -46,7 +46,7 @@
   --accent: #0193A0;                   /* cyan darkened for contrast on light */
   --accent-2: #017E8A;
   --accent-ink: #FFFFFF;
-  --ok: #5E7A00;                        /* lime darkened for light bg */
+  --ok: #1a7f37;                        /* lime darkened for light bg */
   --ok-ink: #FFFFFF;
   --blue: #0193A0;
   --ring: rgb(1 147 160 / 0.4);
@@ -127,7 +127,7 @@ code {
   width: 28px; height: 28px; border-radius: 4px;
   display: inline-grid; place-items: center;
   border: 1px solid var(--ring);
-  background: rgb(0 220 229 / 0.14);
+  background: rgb(51 197 207 / 0.14);
   color: var(--accent);
   font-family: var(--font-mono); font-weight: 700; font-size: 14px; line-height: 1;
 }
@@ -168,17 +168,6 @@ code {
 
 /* ---------- hero ---------- */
 .hero { position: relative; padding: clamp(56px, 9vw, 104px) 0 clamp(40px, 6vw, 72px); overflow: hidden; }
-.hero::before {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background:
-    radial-gradient(1100px 460px at 78% -8%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 60%),
-    radial-gradient(720px 380px at 6% 4%, color-mix(in srgb, var(--blue) 10%, transparent), transparent 62%);
-}
-.hero::after {
-  content: ""; position: absolute; inset: 0; z-index: -1; opacity: .5;
-  background-image: linear-gradient(var(--border-soft) 1px, transparent 1px), linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
-  background-size: 46px 46px; -webkit-mask-image: radial-gradient(120% 90% at 50% 0%, #000 30%, transparent 72%); mask-image: radial-gradient(120% 90% at 50% 0%, #000 30%, transparent 72%);
-}
 .hero__title { font-size: clamp(40px, 7vw, 74px); font-weight: 700; letter-spacing: -0.035em; margin-bottom: 22px; }
 .hero__lede { max-width: 720px; font-size: clamp(16px, 2vw, 19px); color: var(--text-2); }
 .hero__lede strong { color: var(--text); font-weight: 600; }
@@ -253,12 +242,7 @@ code {
 .diagram figcaption { margin-top: 18px; color: var(--muted); font-size: 14px; text-align: center; }
 
 /* ---------- manifesto ---------- */
-.section--manifesto { position: relative; overflow: hidden; }
-/* a single "light kept on" over the dark factory floor */
-.section--manifesto::before {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background: radial-gradient(680px 340px at 82% 6%, rgb(0 220 229 / 0.09), transparent 60%);
-}
+.section--manifesto { position: relative; }
 .manifesto__prose { max-width: 760px; color: var(--text-2); font-size: clamp(16px, 1.7vw, 18px); margin: 0 0 clamp(34px, 4vw, 46px); }
 .manifesto__quote {
   position: relative; margin: 0 0 clamp(40px, 5vw, 58px); padding: 0 0 0 clamp(24px, 4vw, 46px);
@@ -315,8 +299,7 @@ code {
 .integrations__note { margin-top: 16px; color: var(--muted); font-size: 14px; }
 
 /* ---------- CTA ---------- */
-.cta { text-align: center; position: relative; overflow: hidden; }
-.cta::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(760px 320px at 50% 0%, color-mix(in srgb, var(--accent) 15%, transparent), transparent 65%); }
+.cta { text-align: center; }
 .cta__inner { max-width: 760px; }
 .cta__title { font-size: clamp(28px, 4.4vw, 46px); letter-spacing: -0.03em; }
 .cta__lede { color: var(--text-2); font-size: clamp(16px, 2vw, 19px); margin: 20px 0 6px; }
