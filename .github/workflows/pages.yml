@@ -38,6 +38,8 @@ jobs:
         with:
           # Static site — no build step. Upload only files meant for production.
           path: .pages
+      - name: Wait for Pages artifact propagation
+        run: sleep 30
       - id: deployment
         uses: actions/deploy-pages@v4
         continue-on-error: true
