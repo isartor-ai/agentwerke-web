@@ -43,13 +43,13 @@
   --text: #14201F;
   --text-2: #3C4E4E;
   --muted: #5E7071;
-  --accent: #0193A0;                   /* cyan darkened for contrast on light */
-  --accent-2: #017E8A;
+  --accent: #017e8a;                   /* cyan darkened for contrast on light */
+  --accent-2: #016d77;
   --accent-ink: #FFFFFF;
   --ok: #1a7f37;                        /* lime darkened for light bg */
   --ok-ink: #FFFFFF;
   --blue: #0193A0;
-  --ring: rgb(1 147 160 / 0.4);
+  --ring: rgb(1 126 138 / 0.4);
   --shadow: 0 18px 44px -26px rgb(20, 45, 45, 0.3);
 }
 
