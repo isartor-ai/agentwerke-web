@@ -30,7 +30,7 @@ jobs:
         run: |
           rm -rf .pages
           mkdir -p .pages
-          cp index.html CNAME robots.txt sitemap.xml .pages/
+          cp index.html CNAME robots.txt sitemap.xml agentwerke-whitepaper.pdf .pages/
           cp -R assets .pages/assets
           find .pages -maxdepth 3 -type f | sort
       - name: Upload site
