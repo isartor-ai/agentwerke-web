@@ -74,6 +74,24 @@
     reveals.forEach(revealNow);
   }
 
+  /* ---- demo video chapters ---- */
+  var video = document.getElementById("demo-video");
+  var chapters = document.querySelectorAll(".demo-chapter[data-seek]");
+  if (video && chapters.length) {
+    chapters.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var sec = parseFloat(btn.getAttribute("data-seek") || "0");
+        try {
+          video.currentTime = sec;
+          var p = video.play();
+          if (p && typeof p.catch === "function") p.catch(function () {});
+        } catch (e) {}
+        chapters.forEach(function (b) { b.classList.remove("is-active"); });
+        btn.classList.add("is-active");
+      });
+    });
+  }
+
   /* ---- year ---- */
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
