@@ -71,6 +71,7 @@
       </a>
 
       <nav class="nav__links" aria-label="Primary">
+        <a href="#demo">Product tour</a>
         <a href="#manifesto">Manifesto</a>
         <a href="#problem">Problem</a>
         <a href="#product">Platform</a>
@@ -92,6 +93,7 @@
       </div>
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
+      <a href="#demo">Product tour</a>
       <a href="#manifesto">Manifesto</a>
       <a href="#problem">Problem</a>
       <a href="#product">Platform</a>
@@ -119,7 +121,8 @@
           Self-hosted, on your infrastructure, with your model keys and your data boundary.
         </p>
         <div class="hero__cta reveal">
-          <a class="btn btn--primary btn--lg" href="#cta">Request access</a>
+          <a class="btn btn--primary btn--lg" href="#demo">Watch 90s product tour</a>
+          <a class="btn btn--ghost btn--lg" href="#cta">Request access</a>
           <a class="btn btn--ghost btn--lg" href="https://github.com/isartor-ai/agentwerke" rel="noopener" target="_blank">View GitHub</a>
           <!-- Docs hosted at docs.agentwerke.de -->
           <a class="btn btn--ghost btn--lg" href="https://docs.agentwerke.de/" rel="noopener" target="_blank">Read the docs</a>
@@ -140,6 +143,138 @@
           <li>BPMN-native runtime</li>
           <li>Postgres-backed, self-hosted</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCT TOUR / DEMO ===================== -->
+    <section class="section section--panel" id="demo">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Product tour</p>
+          <h2>See the governed V-Model factory in action</h2>
+          <p class="section__lede">
+            Watch a 90-second end-to-end walkthrough of Agentwerke: authoring a governed BPMN 2.0
+            V-Model workflow, monitoring fleet execution and automated rework loops, inspecting
+            sandboxed Claude 3.7 tool telemetry and bilateral traceability, and gating production
+            releases with human-in-the-loop approvals and zero-trust policy simulation.
+          </p>
+        </header>
+
+        <div class="demo-frame">
+          <div class="demo-frame__bar" aria-hidden="true">
+            <span class="demo-frame__dots"><i></i><i></i><i></i></span>
+            <span class="demo-frame__title">agentwerke · V-Model Autonomous SDLC Pipeline (v2.4.0)</span>
+            <span class="demo-frame__badge">1080p · 90s</span>
+          </div>
+          <video
+            id="demo-video"
+            class="demo-frame__video"
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/screenshots/04-run-detail-live-bpmn.png"
+          >
+            <source src="assets/demo/agentwerke-demo.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video. <a href="assets/demo/agentwerke-demo.mp4">Download the MP4 product tour</a>.
+          </video>
+          <div class="demo-chapters" role="group" aria-label="Jump to demo chapter">
+            <button type="button" class="demo-chapter" data-seek="0">
+              <span class="demo-chapter__time">0:00</span>
+              <span class="demo-chapter__label">BPMN 2.0 &amp; V-Model Factory</span>
+            </button>
+            <button type="button" class="demo-chapter" data-seek="15">
+              <span class="demo-chapter__time">0:15</span>
+              <span class="demo-chapter__label">Fleet Run Board</span>
+            </button>
+            <button type="button" class="demo-chapter" data-seek="27">
+              <span class="demo-chapter__time">0:27</span>
+              <span class="demo-chapter__label">Live BPMN &amp; Sandbox Trace</span>
+            </button>
+            <button type="button" class="demo-chapter" data-seek="43">
+              <span class="demo-chapter__time">0:43</span>
+              <span class="demo-chapter__label">Bilateral Traceability</span>
+            </button>
+            <button type="button" class="demo-chapter" data-seek="55">
+              <span class="demo-chapter__time">0:55</span>
+              <span class="demo-chapter__label">HITL Approvals &amp; Policies</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="demo-gallery" aria-label="Control plane screenshot showcase">
+          <figure class="demo-shot">
+            <a href="assets/screenshots/01-workflow-designer.png" target="_blank" rel="noopener">
+              <img src="assets/screenshots/01-workflow-designer.png" alt="BPMN 2.0 Workflow Designer with V-Model Autonomous SDLC Pipeline and Agent Task inspector" loading="lazy" />
+            </a>
+            <figcaption>
+              <strong>01 · BPMN 2.0 Workflow Designer</strong>
+              <span>Model V-Model phases, rework gateways, sandbox profiles, and tool permissions in standard BPMN 2.0.</span>
+            </figcaption>
+          </figure>
+          <figure class="demo-shot">
+            <a href="assets/screenshots/02-template-catalog.png" target="_blank" rel="noopener">
+              <img src="assets/screenshots/02-template-catalog.png" alt="Guided SDLC Factory template catalog and V-Model phase configuration" loading="lazy" />
+            </a>
+            <figcaption>
+              <strong>02 · Guided SDLC Factory</strong>
+              <span>Bootstrap governed workflows from enterprise V-Model, Issue-to-PR, and SecOps remediation templates.</span>
+            </figcaption>
+          </figure>
+          <figure class="demo-shot">
+            <a href="assets/screenshots/03-run-board-overview.png" target="_blank" rel="noopener">
+              <img src="assets/screenshots/03-run-board-overview.png" alt="Executive Run Board showing real-time cohort metrics and active workflow runs" loading="lazy" />
+            </a>
+            <figcaption>
+              <strong>03 · Executive Run Board</strong>
+              <span>Track active runs, agent success rate, P95 duration, rework loops, and human approval bottlenecks in real time.</span>
+            </figcaption>
+          </figure>
+          <figure class="demo-shot">
+            <a href="assets/screenshots/04-run-detail-live-bpmn.png" target="_blank" rel="noopener">
+              <img src="assets/screenshots/04-run-detail-live-bpmn.png" alt="Live BPMN execution overlay with green completed nodes and OpenSandbox policy decision" loading="lazy" />
+            </a>
+            <figcaption>
+              <strong>04 · Live BPMN Execution &amp; Policy Gate</strong>
+              <span>Inspect step-by-step BPMN token progression, risk scores, and OpenSandbox policy constraints.</span>
+            </figcaption>
+          </figure>
+          <figure class="demo-shot">
+            <a href="assets/screenshots/05-agent-sandbox-and-llm-trace.png" target="_blank" rel="noopener">
+              <img src="assets/screenshots/05-agent-sandbox-and-llm-trace.png" alt="Claude 3.7 Sonnet conversation, OpenSandbox tool calls, and git diff telemetry" loading="lazy" />
+            </a>
+            <figcaption>
+              <strong>05 · Sandboxed Agent &amp; LLM Telemetry</strong>
+              <span>Audit every prompt, reasoning trace, isolated OpenSandbox shell/git command, and code diff.</span>
+            </figcaption>
+          </figure>
+          <figure class="demo-shot">
+            <a href="assets/screenshots/06-vmodel-traceability-matrix.png" target="_blank" rel="noopener">
+              <img src="assets/screenshots/06-vmodel-traceability-matrix.png" alt="Verified CI traceability and 100% declared V-Model artifact coverage matrix" loading="lazy" />
+            </a>
+            <figcaption>
+              <strong>06 · Bilateral V-Model Traceability</strong>
+              <span>Link external GitHub requirements to CI test runs and verify 100% artifact coverage across all 8 V-Model steps.</span>
+            </figcaption>
+          </figure>
+          <figure class="demo-shot">
+            <a href="assets/screenshots/07-hitl-approvals-and-interactions.png" target="_blank" rel="noopener">
+              <img src="assets/screenshots/07-hitl-approvals-and-interactions.png" alt="Human-in-the-loop release approval and high-risk tool escalation queue" loading="lazy" />
+            </a>
+            <figcaption>
+              <strong>07 · Human-in-the-Loop Approvals</strong>
+              <span>Pause high-risk tool calls and production release gates for explicit human review with inline diff inspection.</span>
+            </figcaption>
+          </figure>
+          <figure class="demo-shot">
+            <a href="assets/screenshots/08-policies-and-audit.png" target="_blank" rel="noopener">
+              <img src="assets/screenshots/08-policies-and-audit.png" alt="Zero-trust policy rules table and live policy impact simulator" loading="lazy" />
+            </a>
+            <figcaption>
+              <strong>08 · Zero-Trust Policy Simulator</strong>
+              <span>Draft, simulate, and enforce tool-gateway rules to block secret access and escalate production delivery actions.</span>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
